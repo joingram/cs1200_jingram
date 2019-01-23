@@ -38,14 +38,17 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # Declare list variable colors that contains following following values:
 # red, blue, green, orange, yellow
 
-colors = []   
-
+colors = ['red', 'blue', 'green', 'yellow',]   
+print(colors)
 
 # Get length of colors and assign it to number_of_colors.
 # Make sure to use the correct python function that returns list length.
 # Do not assign literal value.
 
 number_of_colors = -1
+print(colors[0]) 
+
+print(colors[-1])
 
 
 # Get first item in colors list and assign it to first_color.
@@ -54,13 +57,16 @@ number_of_colors = -1
 
 first_color = None
 
+colors =['red', 'blue', 'green', 'yellow']
+print(colors[0])
+
 
 # Get last item in colors list and assign it to last_color
 # Make sure to use correct syntax for accessing items in list.
 # Do not assign literal value.
 
 last_color = None
-
+print(colors[3])
 
 #=======================================================================
 # TASK 2
@@ -74,44 +80,49 @@ entering and exiting students. The classroom is initially empty.
 
 # Declare list variable called students. The classroom is currently 
 # empty so students should be an empty list.
-
+students=[] 
 
 
 # Alice enters the classroom. Add 'Alice' to list of students.
-
+students.append('Alice')
+print(students)
 
 
 # Bob enters the classroom. Add 'Bob' to list of students.
 
+students.append('Bob')
+print(students)
 
 
 # Dave enters the classroom. Add 'Dave' to list of students.
-
+students.append('Dave')
+print(students)
 
 
 # Now Bob is done with his work and leaves the room. 
 # Remove Bob from the list of students.
-
+students.remove('Bob')
+print(students)
 
 
 # Carol enters the classroom. Add 'Carrrl' to list of students.
-
+students.append('Carrrl')
+print(students)
 
 
 # Oh snap, you misspelled Carol's name. Change 'Carrrl' to 'Carol' 
-
+students[-1]='Carol'
+print(students)
 
 
 # Hall monitor has entered the room and wants to know the names
 # of the people in the classroom, in alphabetical order. 
 # First sort your list of students from A to Z. 
-
-
-
+students.sort()
+print(students)
 # Then assign the sorted list to variable answer.
 
-answer = None
-
+answer = students
 
 #=======================================================================
 # That's it for today!
