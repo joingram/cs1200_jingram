@@ -18,10 +18,10 @@ In this lab you will learn:
 
 Evaluation
 ==========
-20 pts. - submitted filename 3_0.py
-20 pts. - 3_0.py executes without error
-30 pts. - Task 1 meets requirements
-30 pts. - Task 2 meets requirements
+20 pts. - submitted filename 3_0.py     | 20
+20 pts. - 3_0.py executes without error | 20
+30 pts. - Task 1 meets requirements     | 0, please see comments
+30 pts. - Task 2 meets requirements     | 30, very good!
 
 Execute your code to get instant feedback
 
@@ -38,14 +38,14 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # Declare list variable colors that contains following following values:
 # red, blue, green, orange, yellow
 
-colors = ['red', 'blue', 'green', 'yellow',]   
+colors = ['red', 'blue', 'green', 'yellow',]   # <-- you are missing a color
 print(colors)
 
 # Get length of colors and assign it to number_of_colors.
 # Make sure to use the correct python function that returns list length.
 # Do not assign literal value.
 
-number_of_colors = -1
+number_of_colors = -1    # <-- this should be number_of_colors = len(colors)
 print(colors[0]) 
 
 print(colors[-1])
@@ -55,7 +55,7 @@ print(colors[-1])
 # Make sure to use correct syntax for accessing items in list.
 # Do not assign literal value.
 
-first_color = None
+first_color = None         # <-- this should be first_color = colors[0]
 
 colors =['red', 'blue', 'green', 'yellow']
 print(colors[0])
@@ -65,7 +65,7 @@ print(colors[0])
 # Make sure to use correct syntax for accessing items in list.
 # Do not assign literal value.
 
-last_color = None
+last_color = None			# <-- this should be last_color = colors[-1]
 print(colors[3])
 
 #=======================================================================
