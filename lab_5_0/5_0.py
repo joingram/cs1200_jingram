@@ -58,14 +58,14 @@ colors = ['blue', 'blue', 'green']
 # Choose two colors from the list that are equal. Prove that they are 
 # in fact equal by printing a conditional statement where you test
 # their equality.
-
+'blue' == 'blue'
 
 
 
 
 # Choose two colors that are not equal. Prove that they are not equal
 # by printing a conditional statement where you test their inequality.
-
+'blue' != 'geen'
 
 
 
@@ -84,17 +84,16 @@ user4_age = 21
 user5_age = 27
 
 #  Is user1 older than user5? Print your conditional statement.
-
-
+print(user1_age >= user5_age)
 
 
 #  Is user3 younger than user2? Print your conditional statement.
-
+print(user3_age > user2_age)
 
 
 
 #  Is user4 21 or older? Print your conditional statement.
-
+user4_age >=21
 
 
 
@@ -105,17 +104,17 @@ print('\nPart 1C ' + ('='*20))
 # 1c) Declare a list variable called states which contains following 
 #      values: Georgia, Texas, Oregon, Arizona, Maine
 
-
+states= ['Georgia', 'Texas', 'Oregon', 'Arizona', 'Maine']
 
 # Arizona is in the list of states. Print a conditonal statement where
 # you prove that this is True.
-
+'Arizona' in states
 
 
 
 # Ohio is not in the list. Print a conditional statement where you
 # prove that this is True. 
-
+'Ohio' not in states
 
 
 
@@ -138,7 +137,7 @@ print('\n\nPart 2A ' + ('='*20))
 
 # 2a) Declare a boolean varible is_student. You can set the value
 # to by any boolean value.
-
+is_student = True
 
 
 
@@ -146,7 +145,8 @@ print('\n\nPart 2A ' + ('='*20))
 # If user is a student, print "Hello student!". 
 # Write this logical expression in python below. 
 
-
+if is_student:
+	print("Hello student!")
 
 
 
@@ -161,13 +161,16 @@ print('\nPart 2B ' + ('='*20))
 
 # 2b) Declare string variable called country. Assing the value
 # to be any country you want
-
+country = 'Canada'
 
 
 
 # if country is 'United States' print 'USA'. Else print the
 # variable value as-is.
-
+if country == 'United States':
+	print('USA')
+else: 
+	print(country)
 
 
 
@@ -180,6 +183,7 @@ print('\nPart 2C ' + ('='*20))
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 # 2c) Declare integer variable exam_grade. 
+exam_grade = 99
 
 
 
@@ -199,6 +203,17 @@ print('\nPart 2C ' + ('='*20))
 # print 'Your grade is D'
 #
 # else print 'You failed'
+
+if exam_grade >= 90:
+	print('Your grade is A! Good Job!')
+elif exam_grade >= 80:
+	print('Your grade is B')
+elif exam_grade >= 70:
+	print('Your grade is C')
+elif exam_grade >= 60:
+	print('Your grade is D')
+else:
+	print('You failed')
 
 
 
