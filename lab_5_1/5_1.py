@@ -58,7 +58,7 @@ want_to_see = [
 #   
 # Write a for loop where you go through each movie that is currently
 # playing. 
-#
+# 
 # If the movie is one of the ones you want to see, 
 # print 'I want to see ' and the name of the movie (use concatenation)
 #
@@ -68,13 +68,11 @@ want_to_see = [
 # Hint: the list of movies shown in the theater is stored in variable
 # todays_movies, variable with movies you want to see is want_to_see
 
-
-
-
-
-
-
-
+for movie in todays_movies:
+	if movie in want_to_see:
+		print('I want to see' + " " + movie)
+	if movie not in want_to_see:
+		print("I don't want to see" + " " + movie)
 
 
 # Some of the movies you want to see are future releases, so you
@@ -88,6 +86,14 @@ want_to_see = [
 # If the movie is a future release
 # print the movie name and ' will be in theaters soon' (concatenate)
 
+for movie in want_to_see:
+	if movie in todays_movies:
+		print("I can go see Alita: Battle Angel ")
+	if movie not in todays_movies:
+		print("Green Lantern will be in theaters soon")
+	
+	
+	
 
 
 
@@ -95,7 +101,7 @@ want_to_see = [
 
 
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-print()
+
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 #=======================================================================
 # PART 2
@@ -122,19 +128,18 @@ input_is_valid = True
 
 # Declare a string variable called username. Set the value to any value 
 # you want.
-
+username = 'chiefjonny'
 
 
 
 # Declare a string variable called email_address. Set the value to any
 # value you want
-
-
+email_address = 'joingram@augusta.edu'
 
 
 # Declare an integer variable called user_age. Set the value to any
 # value you want.
-
+user_age = 18
 
 
 
@@ -149,13 +154,20 @@ sure these inputs are valid, then take appropriate action.
 #
 #    * length is at least 4 characters, and 
 #    * username is not assigned to any existing user 
-#
+
 # Write the appropriate statement where you test these conditions. 
-# If username DOES NOT meet this criteria, set input_is_valid = False
+# If username DOES NOT meet this criteria, set input_is_invalid = False
 #
 # Hint: existing_users is a list of all existing usernames 
+#if username =>'superuser':
+	#print('USA')
+#else: 
+#	print(country)
 
-
+if len(username) >= 4 and username not in existing_users:
+	pass
+else:
+	input_is_valid = False
 
 
 
@@ -189,7 +201,10 @@ DOES NOT WORK ↑↑↑                        WORKS ↑↑↑
 # Hint: the syntax for checking if string contains some value is 
 # the same as checking if list contains some value. 
 
-
+if '.com' in email_address or '.edu' in email_address:
+	pass
+else:
+	input_is_valid = False
 
 
 
@@ -206,6 +221,10 @@ DOES NOT WORK ↑↑↑                        WORKS ↑↑↑
 
 
 
+if user_age >=13 and user_age <=19:
+	pass
+else:
+	input_is_valid = False
 
 
 
@@ -221,6 +240,12 @@ DOES NOT WORK ↑↑↑                        WORKS ↑↑↑
 #
 # Hint: input_is_valid tells us if user passed all checks or not
 
+if input_is_valid == True:
+	print('Welcome' + username + '.')
+else:
+	input_is_valid = False
+	print('Check inputs and try again')
+	
 
 
 

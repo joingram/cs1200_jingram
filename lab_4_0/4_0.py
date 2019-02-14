@@ -132,24 +132,25 @@ print('There were ' + len(cars) + ' in total')
 
 # Create a numerical (integer) list with 1,000,000 items, with values 
 # from 0 to 999,999. Hint: Use the range() function.
-
+x = list(range(0,1000000))
 
 
 # Write the length of the list out to the screen. Ensure you have 
 # 1,000,000 items in your list. Hint: Use the len() function.
-
+len(x)
 
 
 # Print the smallest item value in the list out to the screen.
-
+min(x)
+print(min(x)
 
 
 # Print the largest item value in the list out to the screen. 
-
-
-
+max(x)
+print(max(x))
 # Print the sum of all the item values out to the screen.  
-
+sum(x)
+print(sum(x))
 
 
 
