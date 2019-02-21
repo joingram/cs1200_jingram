@@ -75,8 +75,19 @@ doors = dict(zip(list('ABCDEF'), val))
 # Hint: it may help to run print(doors) a few times to see what the 
 # dictionary looks like and how the special door changes place each time
 
-print(doors)  
 
+
+
+
+  
+
+for key, value in doors.items():    
+    
+	if value == 1:
+		print("Jackpot! Surprise on behind" + key)
+	else:
+		print("Not behind door" + key)
+	
 
 
 
@@ -109,9 +120,10 @@ print()
 # 1. Create a dictionary named ‘cities’. Select the names of three U.S. 
 # cities (your choice) as keys in your dictionary. 
 
+cities = {
 
-
-
+     
+}
 
 
 
@@ -123,7 +135,27 @@ print()
 #   3) population of the city
 # Use online sources to obtain the county and population information.
 
+cities["Houston"] = {        
+   "state": "Texas",
+   "county": "Harris", 
+   "population": 2300000,
+   }
 
+
+   
+cities["Atlanta"] = {
+    "state": "Georgia",
+    "county": "Fulton",
+	"population": 5600000,
+	}
+
+cities["Tallahassee"] = {
+     "state": "Florida",
+	 "county": "Leon",
+	 "population": 197049,
+	 }
+print(cities)
+   
 
 
 
@@ -134,7 +166,9 @@ print()
 # the information you have stored about that city. See this example:
 # https://i.imgur.com/UhEFrEV.png
 
-
+for key, value in cities.items():
+	print(key + " is located in " +cities[key]["county"] + "County, " + cities[key]["state"] + ".")
+	print(key + "'s population is " + str(cities[key]["population"]) + "." )
 
 
 
