@@ -45,19 +45,25 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # 1. Create a dictionary called `my_university`. This 
 #    dictionary should initially be empty.
 
+my_university = {
 
+
+}
 
 
 # 2. Add new key-value pair to my_university dictionary. 
 #    The key is `name` and the value is `Augusta University`
-
-
+my_university['name'] = "Augusta Univerity"
+   
+   
 
 
 
 # 3. Add new key-value pair to my_university dictionary.
 #    The key is `founding_year` and the value is 1828 (integer)
-
+my_university['founding_year'] = 1828
+   
+   
 
 
 
@@ -65,14 +71,22 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # 4. Add new key-value pair to my_university dictionary.
 #    The key is `president` and the value is `Brooks Keel`
 
-
+my_university['president'] = 'Brooks Keel'
+   
 
 
 
 # 5. Add new key-value pair to my_university dictionary.
 #    The key is `campuses` and the value is a list with following
 #    values: summerville, riverfront, health sciences, forest hills
-
+my_university['campuses'] = {      
+   'summerville',
+   'riverfront',
+   'health sciences',
+   'forest hills',
+   
+   
+   }
 
 
 
@@ -89,6 +103,18 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #    "HIST" : "History"
 #    "HUMN" : "Humanities"
 #    You can add more key-value pairs if you want.
+my_university['course_codes'] = {      
+   "BIOL": "Biology",
+   "CSCI": "Computer Science",
+   "MATH": "Mathematics",
+   "PHYS": "Physics",
+   "ENGL": "English",
+   "POLS": "Political Science",
+   "HIST": "History",
+   "HUMN": "Humanities",
+   
+   
+   }
 
 
 
@@ -119,7 +145,7 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #    the dictionary you created in part 1.
 
 
-
+print("I'm a student at" + my_university["name"] + "." + "The university was founded in" + "" + str(my_university["founding_year"]) + ".")
 
 
 
@@ -130,7 +156,12 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #
 #    Print the names of ALL campuses.
 #    If you want, you can try to print them in alphabetical order.
-
+print("The univerity has 4 campuses") 
+for campus in sorted(my_university['campuses']):
+	print(campus)
+	
+ 
+ 
 
 
 
@@ -143,6 +174,16 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #
 #    Print ONLY names of subjects you have taken or are currently
 #    taking, for example "Computer Science" and/or "History".
+c = my_university["course_codes"]
+print("I have taken courses in:")
+print(c["CSCI"])
+print(c["MATH"])
+print(c["ENGL"])
+print(c["POLS"])
+print(c["HIST"])
+
+
+
 
 
 
@@ -161,25 +202,29 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #  1. Remove key-value pair `course_codes` from `my_university`.
 #     Use del keyword.
 
+del my_university['course_codes']
 
 
 
 #  2. Remove key-value pair `president` from `my_university`.
 #     Use a different keyword other than del. 
-
+my_university.pop('president')
 
 
 
 #  3. Remove key-value pair `campuses` from `my_university`.
 #     Choose any appropriate keyword. 
+my_university.pop('campuses')
 
 
 
 
 #  4. Test that `my_university` no longer contains the key `campuses`.
 #     Hint: write a conditional statement and print the truth value
-
-
+if 'campuses' not in my_university:
+	print('right')
+else:
+	print('wrong')
 
 
 
@@ -189,20 +234,20 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #     Change `name` to 'Harvard University'
 #     Change `founding_year` to 1636
 
-
+my_university['name'] = 'Harvard Univeristy'
+my_university['founding_year'] = 1636
 
 
 
 #  6. Print `my_university` to verify that the values have changed.
-
-
+print(my_university)
 
 
 
 #  7. Lastly remove all remaining key-value pairs from `my_university`.
 #     Hint: There is a special command that removes all key-value
 #     pairs from a python dictionary, it starts with c.
-
+my_university.clear()
 
  
 
