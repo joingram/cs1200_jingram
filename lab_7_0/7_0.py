@@ -69,6 +69,66 @@ Earn 5 pts. extra credit by submitting using git by due date.
 
 # Hint 5: ask user if they want to continue or quit. 
 
+while True:
+	
+	print("Hello!" + " " + "What is your name and party size")
+
+	Name = input("What is the name? ")
+	party_size = input("What is party size? ")
+	party_size = int(party_size)
+
+	if party_size <= 0:
+
+		print("Give me real number please")
+	elif party_size <= 3:
+		print("We can seat you now") 
+	elif party_size <= 4:
+		print("We can seat you in about 10-12 minutes")
+	elif party_size <= 5:
+		print("We can seat you in about 20-25 minutes")
+	elif party_size <= 6:
+		print("We can seat you in about 20-25 minutes")
+	elif party_size <= 7:
+		print("We can seat you in about 20-25 minutes")
+	elif party_size <= 8:
+		print("We can seat you in about 20-25 minutes")
+	elif party_size <= 9:
+		print("We can seat you in about 30-40 minutes")
+	elif party_size <= 10:
+		print("We can seat you in about 30-40 minutes")
+	elif party_size <= 11:
+		print("We can seat you in about 30-40 minutes")
+	elif party_size <= 12:
+		print("We can seat you in about 40-60 minutes")
+	elif party_size >= 12:
+		print("We can seat you in about an hour")
+
+	yes_no= input("Would you like to continue? Y or n")
+
+	if yes_no.lower() == "n":
+		break
+	
+
+# ~ while True:
+	# ~ party_size = input(prompt)
+	
+	# ~ if party_size == False:
+		# ~ prin
+		
+	# ~ else:
+	# ~ print("Alright," + name.title(), + int(party_size))
+
+
+	
+
+
+# ~ prompt = "\Enjoy your dinner"
+# ~ prompt += "\nEnter 'quit' to end the program. "
+# ~ message = ""
+# ~ while message != 'quit':
+   # ~ message =input(prompt)
+# ~ print(message)
+# ~ print()
 
 #=======================================================================
 # That's it for today!
