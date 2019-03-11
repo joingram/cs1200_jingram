@@ -42,13 +42,37 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # to return an integer. Don't forget the docstrings!
 #-----------------------------------------------------------------------
 
+def add_numbers(m, n):
+	"""Returns the sum of two numbers."""
+	return m+n
+add_numbers(3,0)
 
-
-
-
-
-
-
+x=add_numbers(3,0)
+print(x)
+def subtract_numbers(m, n):
+	"""Returns the difference of two numbers."""
+	return m-n
+subtract_numbers(3,2)
+z=subtract_numbers(3,2)
+print(z)
+def multiply_numbers(m, n):
+	"""Returns the product of two numbers."""
+	return m*n
+multiply_numbers(3,2)
+m=multiply_numbers(3,2)
+print(m)
+def divide_numbers(m, n):
+	"""Returns the quotient of two numbers."""
+	return m/n
+divide_numbers(10,2)
+d=divide_numbers(10,2)
+print(d)
+def remainderof_numbers(m, n):
+	"""Returns the aquotient of two numbers."""
+	return m%n
+remainderof_numbers(11,2)
+r=remainderof_numbers(11,2)
+print(r)
 
 
 
@@ -73,15 +97,35 @@ Earn 5 pts. extra credit by submitting using git by due date.
 # See sample output here: https://i.imgur.com/l3xEoJP.png
 #-----------------------------------------------------------------------
 
+name=input("enter your name")
+print("Thanks" + name + "!")
+first_interger=int(input("Give me your first interger" + ""))
+second_interger=int(input("Give me your second interger"))
+print( "Great," + name + " your numbers are" + str(first_interger) + "and" + str(second_interger)) 
+
+print("I'll now add" )
+print(str(subtract_numbers(first_interger,second_interger)) + " is your answer")
+
+print("Thanks" + name + "!")
+
+print( "Great," + name + " your numbers are" + str(first_interger) + "and" + str(second_interger)) 
+print("I'll now subtract")  
+print(str(subtract_numbers(first_interger,second_interger)) + " is your answer")
+
+
+print( "Great," + name + " your numbers are" + str(first_interger) + "and" + str(second_interger)) 
+print("I'll now multiply")
+print(str(multiply_numbers(first_interger,second_interger)) + "is your answer")
 
 
 
+print( "Great," + name + " your numbers are" + str(first_interger) + "and" + str(second_interger)) 
+print("I'll now divide") 
+print(str(divide_numbers(first_interger,second_interger)) + "is your answer") 
 
-
-
-
-
-
+print( "Great," + name + " your numbers are" + str(first_interger) + "and" + str(second_interger)) 
+print("I'll now divide the numbers") 
+print(str(remainderof_numbers(first_interger,second_interger)) + " is your answer")
 
 #=======================================================================
 # That's it for today!
