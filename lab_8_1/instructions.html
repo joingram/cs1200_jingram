@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>CSCI 1200 Lab 8.1</title>
+    </head>
+<body>
+
+        <div>
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+        <style scoped>
+            html, body{
+                margin:0; padding:0;
+            }
+            body{
+                background: #eee;
+                font-family: 'Work Sans', sans-serif;
+                color: #333;
+            }
+            body * {
+                outline:none
+            }
+            .content{
+                width: 90%;
+                background: #fff;
+                max-width: 1024px;
+                margin: 10px auto 80px auto;
+                border-radius: 4px;
+                box-shadow: 0 1px 8px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12);
+                min-height: 80vh;
+            }
+            .content .section{
+                padding: 32px;
+            }
+            .content .section:not(:first-child){
+                border-top: 1px solid #ddd;
+            }
+            h1, h2, h3, h4, h5, h6{
+                margin:0 0 15px 0;
+            }
+            p, ol, table{
+                color: #686868;
+                line-height: 1.4;
+                font-size: 1.2em;
+            }
+            ol{
+                margin-bottom: 20px;
+            }
+
+            table{
+                border-collapse: collapse;
+                margin-bottom: 30px;
+            }
+            tr, td{
+                border: 1px solid #ddd;
+            }
+            td{
+                padding: 5px 10px;
+            }
+            code{
+                font-size: 1.2em;
+                background: #cedae0;
+                color: #13404e;
+                padding: 2px 5px;
+                display: inline-block;
+                border-radius: 3px;
+                font-weight: 600;
+            }
+            .indent{
+                padding-left: 50px;
+                margin-top:60px;
+                margin-bottom: 60px;
+            }
+            h3{
+                margin-top: 30px;
+            }
+            .console{
+                background:#111; color: #fff;font-family: monospace; padding:20px; display:table;
+                font-size: 1.2em;
+            }
+        </style>
+    <div class="content" style="width: 90%; background: #fff; max-width: 1024px; margin: 10px auto 80px auto; border-radius: 4px; box-shadow: 0 1px 8px 0 rgba(0,0,0,.2),0 3px 4px 0 rgba(0,0,0,.14),0 3px 3px -2px rgba(0,0,0,.12); min-height: 80vh;">
+        <div class="section">
+            <h1>Lab 8.1</h1>
+            <p>In this lab we will continue working with functions. More specifically you will learn how to create reusable modules and import an use them in other code files.
+                Follow instructions provided in this file and complete your work in Geany IDE.
+            </p>
+            <h3>Learning Outcomes</h2>
+            <p>In this lab you will learn how to:</p>
+            <ol>
+                <li>Split your code into multiple files</li>
+                <li>Create modules</li>
+                <li>Import modules</li>
+                <li>Reuse code</li>
+            </ol>
+            <h3>Evaluation</h2>
+            <table>
+                 <tr><td>20 pts.</td><td>Submitted all required files</td></tr>
+                 <tr><td>20 pts.</td><td>Program executes without error</td></tr>
+                 <tr><td>40 pts.</td><td>Part 1 meets requirements</td></tr>
+                 <tr><td>20 pts.</td><td>Part 2 meets requirements</td></tr>
+            </table>
+            <h3>Submission</h3>
+            <p>Make sure you submit <i>all</i> assignment files.</p>
+            <p>As before, submit your work on D2L or using git. Earn 5 pts. extra credit by submitting using git by due date.</p>
+        </div>
+        <div class="section">
+            <h2>Assignment Instructions</h2> 
+            <h3>PART 1</h3>
+            <p>When you start writing larger projects in python, you will need to split your code between multiple files called <i>modules</i>.
+                In this part we will practice writing and using a module.
+            </p>
+
+            <h3>1. Create a file <code>my_functions.py</code></h3>
+            <h3>2. In <code>my_functions.py</code>, implement following functions:</h3>
+            <p>Remember to include a docstring in each function!</p>            
+                <div class="indent">
+                <h3>2.1. function name: <code>replicate</code></h3>
+                <p>This function takes one <u>string</u> parameter, and one <u>integer</u> parameter and returns a <u>list</u> where the provided string occurs n times.
+                    <br/><br/>Examples: 
+                    <br/><code>replicate('h1', 2)</code>  will return <code>['hi','hi']</code>
+                    <br/><code>replicate('hello', 3)</code>  will return <code>['hello','hello','hello']</code>
+                </p>
+                <br/><br/>
+                <h3>2.2 function name: <code>unique</code></h3>
+                    <p>This function takes <u>arbitrary number of strings</u> as parameter, and returns a <u>list</u> where all duplicate values have been removed.
+                        Order of items in the returned list does not matter.
+                        <br/><br/>Examples:
+                        <br/><code>unique('blue','green','blue','red')</code> will return <code>['blue','green','red']</code>
+                        <br/><code>unique('apple','banana','apple')</code> will return <code>['apple','banana']</code>
+                    </p>
+                    </div>
+            <h3>3. Create a file <code>main.py</code></h3>
+            <h3>4. In <code>main.py</code>, import <code>my_functions.py</code></h3>
+                <p>Pay attention to the line number where you add the import statement</p>
+            <h3>5. Write code where you call the two functions from <code>my_functions.py</code></h3>
+            <p>Your code should perform at least two different functions calls to each function to ensure the functions are working correctly. It is perfectly fine 
+                to use the examples above as function calls.
+            </p>
+        </div>
+        <div class="section">
+            <h3>PART 2</h3>
+            <p>Python provides us several helpful, pre-written modules that provide standardized solutions for many problems that occur in everyday programming.
+                A full reference of these modules is available here: <a href="https://docs.python.org/3/library/" target="new">https://docs.python.org/3/library/</a>.
+                <br/><br/>It is a good idea to make yourself familiar with the available functions to save yourself from re-writing something that is already available to you.
+                If you are not sure if a function already exists, you should research first (google and check stack overflow for tips). If you cannot find a function
+                that does what you need, only then write it yourself.
+                <br/><br/>In this part we will practice using Python provided standard modules. Do your work in <code>main.py</code> that you created in part 1.
+            </p>
+            <h3>1. Using <code>main.py</code> import cos, sin and tan functions from python math module</h3>
+            <p>Look at the <a href="https://docs.python.org/3/library/math.html" target="new">this document</a> as reference to find the correct function names.
+            Also pay attention to where you add the import statements.
+            </p>
+            <h3>2. In <code>main.py</code>, print the cosine, sine, and tangent values of 0.67</h3>
+            <p>Print full sentences.
+
+            </div>
+            <div class="section">
+        
+            <h2>Sample Output</h2>
+                <div class="console">
+                    hi repeated 2 times: ['hi', 'hi']
+                    <br/>bye repeated 4 times: ['bye', 'bye', 'bye', 'bye']
+                    <br/>
+                    <br/>blue, green, blue, red without duplicates: ['red', 'blue', 'green']
+                    <br/>apple, banana, apple without duplicates: ['banana', 'apple']
+                    <br/>
+                    <br/>The cos of 0.67 is 0.7838216658808492
+                    <br/>The sin of 0.67 is 0.6209859870365597
+                    <br/>The tan of 0.67 is 0.7922541747282569
+                </div>
+            </p>
+              <h3>That's it for today!
+              <br/>End of Lab Exercise 8.1
+            </h3>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>
