@@ -49,14 +49,14 @@ Earn 5 pts. extra credit by submitting using git by due date.
 #    a default value 0.
 # 
 # 3. Within Car class, make a method called drive(). The drive accepts
-#    a numeric parameter `miles`. Im the method body, add miles
+#    a numeric parameter `miles`. In the method body, add miles
 #    to the current mileage of the car.
 #
 # 4. Within Car class, make another method called print_mileage(). This
 #    method will print the make and model and the current mileage.
 #
 # 5. Within Car class, make another method called fill_gas(). When
-#    called, this method prints an appriate message, such as "gas
+#    called, this method prints an appropriate message, such as "gas
 #    tank filled". This completes your Car class.
 #-----------------------------------------------------------------------
 
@@ -85,9 +85,9 @@ Earn 5 pts. extra credit by submitting using git by due date.
 
 #-----------------------------------------------------------------------
 # 8. Instantiate two objects where one must be a Car and one must be an 
-#    ElecticCar.
+#    ElectricCar.
 #
-# 9. Demonstate that, for both objects, you can call the method drive. 
+# 9. Demonstrate that, for both objects, you can call the method drive.
 #    After that display the mileage for both objects.
 #
 # 10. Demonstrate that for both objects, you can call the method 
