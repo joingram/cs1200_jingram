@@ -71,9 +71,14 @@ def read_book(guestbook):
 #    an object called `guestbook`. You will need to use json.loads() 
 #    method to correctly parse the data. 
 #-----------------------------------------------------------------------
+import json
 
-
-
+filename ="guestbook.json"
+with open(filename) as guestbook:
+	username = json.load(guestbook)
+	
+	
+	
 
 
 
@@ -106,8 +111,17 @@ def read_book(guestbook):
 # 6. If user wants to quit, break the while loop. 
 #-----------------------------------------------------------------------
 
-
-
+while True:
+	user_response = input("Input one of the following: \n[1]Sign Guestbook \n[2]Read Guestbook \n[3]Quit")
+	if user_response == str(1):
+		name = input("What is your name")
+		add_guest(username, name)
+		
+	elif user_response == str(2):
+		read_book(username)
+		
+	else:
+		break
 
 
 
@@ -125,7 +139,8 @@ def read_book(guestbook):
 #    lost between executions.
 #-----------------------------------------------------------------------
 
-
+with open (filename, 'w') as guestbook:
+	json.dump(username, guestbook)
 
 
 
