@@ -23,7 +23,7 @@ class TestMyFunctions(unittest.TestCase):
 	def test_letters(self):
 		self.assertEqual(my_functions.letters('Hello World'), [' ', 'H', 'W', 'd', 'e', 'l', 'o', 'r'])
 	def test_letters2(self):
-		self.assertEqual(my_functions.letters('Hello World'), [' ', 'H', 'W', 'd', 'e', 'l', 'o', 'r'])
+		self.assertEqual(my_functions.letters('turkey'), [ 'e', 'k', 'r', 't', 'u','y' ])
 	
 		
 unittest.main()
