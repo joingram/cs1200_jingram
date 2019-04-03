@@ -11,7 +11,7 @@ def subtract_numbers(a, b):
     return b - a
 
 def multiply_numbers(a, b):
-    """Computers the product of a and b"""
+    """Computes the product of a and b"""
     return 0
 
 def is_prime(number):
