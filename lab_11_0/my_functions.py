@@ -2,13 +2,14 @@
 Basic functions 
 """
 
-def add_numbers(a, b):
+def add_numbers(a,b):
     """Computes the sum of a and b"""
-    return 5
+    return a+b
 
 def subtract_numbers(a, b):
     """Subtracts b from a"""
     return b - a
+
 
 def multiply_numbers(a, b):
     """Computes the product of a and b"""
@@ -24,7 +25,7 @@ def is_prime(number):
         raise Exception("number must be greater than 1")
     
     for i in range(2, number):
-        if (num % i) == 0:
+        if (number % i) == 0:
              return False
 
     return True
