@@ -62,14 +62,14 @@ Earn 5 pts. extra credit by submitting using git by due date.
 
 class Car():
 	"""class is car"""
-	def _init_(self, make, model):
+	def __init__(self, make, model, year):   # init method uses two underscores __init__
 		self.make = make
 		self.model = model
 		self.year = year
 		self.mileage_reading = 0
 		
 	def get_descriptive_name(self):
-		long_name = str(self.year) + ' ' + self.make + ' ' + slef.model
+		long_name = str(self.year) + ' ' + self.make + ' ' + self.model
 		return long_name.title()
 		
 	def read_mileage(self):
@@ -86,15 +86,16 @@ class Car():
 		
 class ElectronicCar(Car):
 	"""Represent aspects of a car , specific to electric vehicles."""
-	def _init_(self, make, model, year):
+	def __init__(self, make, model, year):   # init method uses two underscores: __init__
 		"""Initialize attributes of the parent class."""
-		super()._init_(make, model, year)
+		super().__init__(make, model, year)
 		
 		
-my_tesla = ElectricCar('tesla', 'model s', 2016)
+my_tesla = ElectronicCar('tesla', 'model s', 2016)  # check class name spelling
 print(my_tesla.get_descriptive_name())
 		
-
+# should include more examples of class usage where you 
+# call different methods for Car and ElectronicCar, see steps 8. - 11.
 
 
 
